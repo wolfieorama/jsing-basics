@@ -5,7 +5,7 @@ function changePowerTotal (totalPower, genID, genStatus, amtOfPower){
       return totalPower + amtOfPower;
     }
     else if (genStatus == "off"){
-      alert("Generator #" +genID+  " is now on, adding " + amtOfPower + " MW, for a total of " +(totalPower - amtOfPower)+ " MW!");
+      alert("Generator #" +genID+  " is now off, adding " + amtOfPower + " MW, for a total of " +(totalPower - amtOfPower)+ " MW!");
        return totalPower - amtOfPower;
     }
   }
