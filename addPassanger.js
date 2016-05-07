@@ -9,7 +9,7 @@ function addPassanger (name, list){
         list[i] = name;
         return list;
       }
-      else if(list[i] == list.length - 1){
+      else if(i == list.length - 1){
         list.push(name);
         return list;
       }
