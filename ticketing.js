@@ -17,3 +17,5 @@ function buildTicket(allRides, passRides, pick){
     }
   }
 }
+
+buildTicket(parkRides, fastPassQueue, wantsRide)();//an immediately invoked function
