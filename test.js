@@ -1,7 +1,7 @@
-function buildAirlineTicketMaker(class){
+function buildAirlineTicketMaker(tclass){
   return function(airline){
-    alert("Here is your flight ticket via the " + class + ".\n" +
-          "Welcome to the luxury of, " + airline + "!");
+    alert("Here is your flight ticket via the " + tclass + ".\n" +
+          "Welcome to the luxury, " + airline + "!");
   }
 }
 
