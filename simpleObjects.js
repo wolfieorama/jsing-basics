@@ -9,10 +9,26 @@ var vehicles = [vehicle1, vehicle2, vehicle3];
 var findVehicle = function (name, list){
   for(var i=0; i < list.length; i++){
     if(name == list[i].type){
-      return list[i].storedAt;
+      return list[i].capacity;
     }
   }
 };
+
+// add and adjust object properties here
+vehicle1.capacity = 10;
+vehicle2.submersible = false;
+vehicle3.weapon = "Torpedoes";
+vehicle1.submersible = false;
+vehicle2.weapon = "Lasers";
+vehicle3.capacity = 16;
+vehicle1.weapon = "Rear-Mounted Slingshot"
+vehicle3.submersible = true;
+
+// add properties and assign values string properties for that matter
+
+vehicle3["# of weapons"] = 8;
+vehicle2["# of weapons"] = 4;
+vehicle1["# of weapons"] = 1;
 
 // call findVehicle
 
