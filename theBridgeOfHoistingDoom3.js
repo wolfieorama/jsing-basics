@@ -15,7 +15,7 @@ function theBridgeOfHoistingDoom() {
   }
 
   fall = "Fly you fools!";
-
+  
   fellowship = function() {
     return "broken";
   }
