@@ -18,8 +18,8 @@ var aquarium = {
 aquarium.addCritter("Bubbles", "fish", "yellow tang", 5.6); //adds bubbles into aquarium
 
 aquarium.takeOut = function(name){
-  this[name].name = name;
-  var temp = this[name];
+  this[name].name = name; //  this create a new property inside the object with the same name as the object
+  var temp = this[name]; // this holds the object we are about to delete
   delete this[name];
   return temp;
 };
