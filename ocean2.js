@@ -32,7 +32,7 @@ function dontPanic(location) {
     "There be Pirates nearby! Stations!\n";
 
   for (var i = 1; i <= location.numRangers; i++){
-     list = list + location["ranger" + i].name + ", man the " + location.weaponBulbs[i-1][0] + "!\n";
+     list = list + location["ranger" + i].name + ", man the " + location.weaponBulbs[location["ranger"+i].station-1][0] + "!\n";
   }
 
   alert(list);
