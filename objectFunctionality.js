@@ -24,5 +24,19 @@ aquarium.takeOut = function(name){
   return temp;
 };
 
+
+aquarium.fishCount = function(){
+  numFish = 0;
+  for(key in this){
+    if(this[key].type == "fish"){
+      numFish++;
+    }
+  }
+  return numFish;
+};
+
 var fishOutOfWater = aquarium.takeOut("Marlin");
+var whatIsCount = aquarium.fishCount();
+
 console.log(fishOutOfWater);
+console.log(whatIsCount);

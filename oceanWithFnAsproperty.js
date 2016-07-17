@@ -26,6 +26,10 @@ lighthouseRock.addBulb = function(name, wattage){
   this.weaponBulbs.push([name, wattage]);
 };
 
+for(key in lighthouseRock){
+  console.log(key);
+}
+
 // call the addRanger method on lighthouseRock
 lighthouseRock.addBulb("mike", 400);
 lighthouseRock.addBulb("Blasterbright", 5000);
