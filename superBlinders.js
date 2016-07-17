@@ -19,4 +19,4 @@ lighthouseRock.weaponsBulbs = superBlinders;
 
 // log the correct weaponBulbs array value to the console
 
-console.log(weaponsBulbs[2][1]);
+console.log(superBlinders[2][1]);
