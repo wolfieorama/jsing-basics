@@ -10,11 +10,11 @@ var rockSpearguns = {
 rockSpearguns["listGuns"] = function() {
   for (var property in this) {
     if(this[property]["heft"] != undefined){
-      var Beholdspeargun = "Behold! " + property +","+ " with " + this[property]["heft"] + " heft!";
-      console.log(Beholdspeargun);
+      var Beholdproperty = "Behold! " + property +","+ " with " + this[property]["heft"] + " heft!";
+      console.log(Beholdproperty);
     }
   }
-}
+};
 
 // call listGuns and pass in rockSpearguns
 rockSpearguns["listGuns"]();
