@@ -59,4 +59,4 @@ var numPriorityCows = canyonCows.countForBreeding() + valleyCows.countForBreedin
 // alert the correct message with the total
 alert("Herd-merger has indicated " + numPriorityCows + " cows of top breeding priority.");
 
-console.log(forestCows.countForBreeding());
+console.log(fnumPriorityCows);
