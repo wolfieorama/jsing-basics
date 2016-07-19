@@ -2,13 +2,13 @@ function Fencepost(x, y, postNum) {
   this.x = x;
   this.y = y;
   this.postNum = postNum;
-  this.connectionsTo = [];  
+  this.connectionsTo = [];
 }
 
 Fencepost.prototype = {
   sendRopeTo: function(connectedPost) {
     this.connectionsTo.push(connectedPost);
-  }
+  },
 
   removeRope: function(removeTo) {
     var temp = [];
@@ -18,7 +18,7 @@ Fencepost.prototype = {
       }
     }
     this.connectionsTo = temp;
-  }
+  },
 
   movePost: function(x, y) {
     this.x = x;
