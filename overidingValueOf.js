@@ -16,7 +16,7 @@ Tornado.prototype.valueOf = function(){//overiding the valeuof prototype method 
   return sum;
 };
 
-Tornado.prototype.toString = function(){
+Tornado.prototype.toString = function(){ // overiding toString
   var list = "";
   for(var i = 0; i < this.affectedAreas.length; i++){
     if(i < this.affectedAreas.length - 1){
@@ -28,4 +28,25 @@ Tornado.prototype.toString = function(){
   }
   return "........." + this.category + "........." +  this.windGust + "mph..........." + list + "......." + this.valueOf() + ".";
 
+};
+
+//to find an object constructor and prototype we use
+
+//twister.constructor //will constructor
+//twister.constructor.prototype //or twister.__proto__ will give the prototypes
+
+
+//hasOwnProperty help in finding overidden prototype methods
+
+Object.prototype.findOwnerOfProperty = function(propName){
+  var currentObject = this;
+  while(currentObject !== null){
+    if(currentObject.hasOwnProperty(propName)){
+      return currentObject;
+    }
+    else{
+      currentObject = currentObject.__proto__;
+    }
+  }
+  return "No property found";
 };
