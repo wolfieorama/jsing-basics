@@ -97,3 +97,22 @@ ON Actors.id = Actors_Movies.actor_id
 INNER JOIN Movies
 ON Movies.id = Actors_Movies.movie_id
 ORDER BY Movies.title ASC;
+
+#aliases
+SELECT a.name, m.title FROM Actors a
+INNER JOIN Actors_Movies am
+ON a.id = am.actor_id
+INNER JOIN Movies m
+ON am.movie_id = m.id
+ORDER BY m.title;
+
+#Left outer join
+SELECT m.title, r.id "Theatre Number" from Movies m
+LEFT OUTER JOIN Rooms r
+ON M.id = r.movied_id;
+
+#Right outer JOIN
+SELECT m.title, r.id "Theatre Number"
+FROM Movies m
+RIGHT OUTER JOIN Rooms r
+ON m.id = r.movie_id;
