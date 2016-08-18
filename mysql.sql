@@ -116,3 +116,13 @@ SELECT m.title, r.id "Theatre Number"
 FROM Movies m
 RIGHT OUTER JOIN Rooms r
 ON m.id = r.movie_id;
+
+#Subquery
+SELECT id from Rooms WHERE seats >
+(SELECT avg(seats) FROM Rooms);
+
+#left outer join and Subquery
+SELECT r.id, m.title FROM Rooms r
+LEFT OUTER JOIN Movies m
+ON m.id = r.movie_id
+WHERE seats > (SELECT AVG(seats) FROM Rooms);
