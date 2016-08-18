@@ -61,10 +61,39 @@ CREATE TABLE Actors_Movies (
 );
 
 #creating
-
 CREATE TABLE Rooms (
   id int PRIMARY KEY,
   seats int,
   movie_id int UNIQUE,
   CONSTRAINT my_fkey FOREIGN KEY (movie_id) REFERENCES Movies (id)
 );
+
+#inner join
+select movies.title, promotions.name, promotions.category
+from movies
+inner join promotions
+on movies.id = promotions.movie_id;
+
+#innner join 3
+select movies.title, genres.name
+from movies
+inner join movies_genres
+on movies.id = movies_genres.movied_id
+inner join genres
+on movies_genres.genre_id = genres.id
+where movies.title = "peter pan";
+
+#join, order by and CHECK
+SELECT MOvies.title, Rooms.id, Rooms.seats From Movies
+INNER JOIN Rooms
+ON Movies.id = Rooms.movie_id
+WHERE Rooms.seats > 75
+ORDER BY Rooms.seats DESC;
+
+#3 joins and order by
+SELECT Actors.name, Movies.title FROM Actors
+INNER JOIN Actors_Movies
+ON Actors.id = Actors_Movies.actor_id
+INNER JOIN Movies
+ON Movies.id = Actors_Movies.movie_id
+ORDER BY Movies.title ASC;
